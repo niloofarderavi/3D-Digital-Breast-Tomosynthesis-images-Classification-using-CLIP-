@@ -1,0 +1,391 @@
+Requirement already satisfied: ftfy in /usr/local/lib/python3.11/dist-packages (6.3.1)
+Requirement already satisfied: regex in /usr/local/lib/python3.11/dist-packages (2024.11.6)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.11/dist-packages (4.67.1)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.11/dist-packages (from ftfy) (0.2.13)
+Collecting git+https://github.com/openai/CLIP.git
+  Cloning https://github.com/openai/CLIP.git to /tmp/pip-req-build-wtb2xr03
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/CLIP.git /tmp/pip-req-build-wtb2xr03
+  Resolved https://github.com/openai/CLIP.git to commit dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: ftfy in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (6.3.1)
+Requirement already satisfied: packaging in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (24.2)
+Requirement already satisfied: regex in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (2024.11.6)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (4.67.1)
+Requirement already satisfied: torch in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (2.6.0+cu124)
+Requirement already satisfied: torchvision in /usr/local/lib/python3.11/dist-packages (from clip==1.0) (0.21.0+cu124)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.11/dist-packages (from ftfy->clip==1.0) (0.2.13)
+Requirement already satisfied: filelock in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (4.13.2)
+Requirement already satisfied: networkx in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (3.4.2)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (3.1.6)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (2025.3.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.3.1.170)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.6.2 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (0.6.2)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (12.4.127)
+Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (3.2.0)
+Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.11/dist-packages (from torch->clip==1.0) (1.13.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.11/dist-packages (from sympy==1.13.1->torch->clip==1.0) (1.3.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.11/dist-packages (from torchvision->clip==1.0) (2.0.2)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /usr/local/lib/python3.11/dist-packages (from torchvision->clip==1.0) (11.2.1)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/dist-packages (from jinja2->torch->clip==1.0) (3.0.2)
+Requirement already satisfied: imbalanced-learn in /usr/local/lib/python3.11/dist-packages (0.13.0)
+Requirement already satisfied: numpy<3,>=1.24.3 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (2.0.2)
+Requirement already satisfied: scipy<2,>=1.10.1 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (1.15.2)
+Requirement already satisfied: scikit-learn<2,>=1.3.2 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (1.6.1)
+Requirement already satisfied: sklearn-compat<1,>=0.1 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (0.1.3)
+Requirement already satisfied: joblib<2,>=1.1.1 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (1.5.0)
+Requirement already satisfied: threadpoolctl<4,>=2.0.0 in /usr/local/lib/python3.11/dist-packages (from imbalanced-learn) (3.6.0)
+Requirement already satisfied: torchvision in /usr/local/lib/python3.11/dist-packages (0.21.0+cu124)
+Requirement already satisfied: albumentations in /usr/local/lib/python3.11/dist-packages (2.0.6)
+Requirement already satisfied: numpy in /usr/local/lib/python3.11/dist-packages (from torchvision) (2.0.2)
+Requirement already satisfied: torch==2.6.0 in /usr/local/lib/python3.11/dist-packages (from torchvision) (2.6.0+cu124)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /usr/local/lib/python3.11/dist-packages (from torchvision) (11.2.1)
+Requirement already satisfied: filelock in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (4.13.2)
+Requirement already satisfied: networkx in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (3.4.2)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (3.1.6)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (2025.3.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.3.1.170)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.6.2 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (0.6.2)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (12.4.127)
+Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (3.2.0)
+Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.11/dist-packages (from torch==2.6.0->torchvision) (1.13.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.11/dist-packages (from sympy==1.13.1->torch==2.6.0->torchvision) (1.3.0)
+Requirement already satisfied: scipy>=1.10.0 in /usr/local/lib/python3.11/dist-packages (from albumentations) (1.15.2)
+Requirement already satisfied: PyYAML in /usr/local/lib/python3.11/dist-packages (from albumentations) (6.0.2)
+Requirement already satisfied: pydantic>=2.9.2 in /usr/local/lib/python3.11/dist-packages (from albumentations) (2.11.4)
+Requirement already satisfied: albucore==0.0.24 in /usr/local/lib/python3.11/dist-packages (from albumentations) (0.0.24)
+Requirement already satisfied: opencv-python-headless>=4.9.0.80 in /usr/local/lib/python3.11/dist-packages (from albumentations) (4.11.0.86)
+Requirement already satisfied: stringzilla>=3.10.4 in /usr/local/lib/python3.11/dist-packages (from albucore==0.0.24->albumentations) (3.12.5)
+Requirement already satisfied: simsimd>=5.9.2 in /usr/local/lib/python3.11/dist-packages (from albucore==0.0.24->albumentations) (6.2.1)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.11/dist-packages (from pydantic>=2.9.2->albumentations) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in /usr/local/lib/python3.11/dist-packages (from pydantic>=2.9.2->albumentations) (2.33.2)
+Requirement already satisfied: typing-inspection>=0.4.0 in /usr/local/lib/python3.11/dist-packages (from pydantic>=2.9.2->albumentations) (0.4.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/dist-packages (from jinja2->torch==2.6.0->torchvision) (3.0.2)
+Using device: cuda
+CLIP model loaded successfully
+
+Total images collected: 15454
+Class distribution: {'Benign': 3789, 'Actionable': 4152, 'Cancer': 2152, 'Normal': 5361}
+Minority classes: ['Cancer', 'Benign']
+Majority class: Normal
+Imbalance ratio (majority:minority): 2.49:1
+
+Extracting features for all images...
+Processed 100/15454 images
+Processed 200/15454 images
+Processed 300/15454 images
+Processed 400/15454 images
+Processed 500/15454 images
+Processed 600/15454 images
+Processed 700/15454 images
+Processed 800/15454 images
+Processed 900/15454 images
+Processed 1000/15454 images
+Processed 1100/15454 images
+Processed 1200/15454 images
+Processed 1300/15454 images
+Processed 1400/15454 images
+Processed 1500/15454 images
+Processed 1600/15454 images
+Processed 1700/15454 images
+Processed 1800/15454 images
+Processed 1900/15454 images
+Processed 2000/15454 images
+Processed 2100/15454 images
+Processed 2200/15454 images
+Processed 2300/15454 images
+Processed 2400/15454 images
+Processed 2500/15454 images
+Processed 2600/15454 images
+Processed 2700/15454 images
+Processed 2800/15454 images
+Processed 2900/15454 images
+Processed 3000/15454 images
+Processed 3100/15454 images
+Processed 3200/15454 images
+Processed 3300/15454 images
+Processed 3400/15454 images
+Processed 3500/15454 images
+Processed 3600/15454 images
+Processed 3700/15454 images
+Processed 3800/15454 images
+Processed 3900/15454 images
+Processed 4000/15454 images
+Processed 4100/15454 images
+Processed 4200/15454 images
+Processed 4300/15454 images
+Processed 4400/15454 images
+Processed 4500/15454 images
+Processed 4600/15454 images
+Processed 4700/15454 images
+Processed 4800/15454 images
+Processed 4900/15454 images
+Processed 5000/15454 images
+Processed 5100/15454 images
+Processed 5200/15454 images
+Processed 5300/15454 images
+Processed 5400/15454 images
+Processed 5500/15454 images
+Processed 5600/15454 images
+Processed 5700/15454 images
+Processed 5800/15454 images
+Processed 5900/15454 images
+Processed 6000/15454 images
+Processed 6100/15454 images
+Processed 6200/15454 images
+Processed 6300/15454 images
+Processed 6400/15454 images
+Processed 6500/15454 images
+Processed 6600/15454 images
+Processed 6700/15454 images
+Processed 6800/15454 images
+Processed 6900/15454 images
+Processed 7000/15454 images
+Processed 7100/15454 images
+Processed 7200/15454 images
+Processed 7300/15454 images
+Processed 7400/15454 images
+Processed 7500/15454 images
+Processed 7600/15454 images
+Processed 7700/15454 images
+Processed 7800/15454 images
+Processed 7900/15454 images
+Processed 8000/15454 images
+Processed 8100/15454 images
+Processed 8200/15454 images
+Processed 8300/15454 images
+Processed 8400/15454 images
+Processed 8500/15454 images
+Processed 8600/15454 images
+Processed 8700/15454 images
+Processed 8800/15454 images
+Processed 8900/15454 images
+Processed 9000/15454 images
+Processed 9100/15454 images
+Processed 9200/15454 images
+Processed 9300/15454 images
+Processed 9400/15454 images
+Processed 9500/15454 images
+Processed 9600/15454 images
+Processed 9700/15454 images
+Processed 9800/15454 images
+Processed 9900/15454 images
+Processed 10000/15454 images
+Processed 10100/15454 images
+Processed 10200/15454 images
+Processed 10300/15454 images
+Processed 10400/15454 images
+Processed 10500/15454 images
+Processed 10600/15454 images
+Processed 10700/15454 images
+Processed 10800/15454 images
+Processed 10900/15454 images
+Processed 11000/15454 images
+Processed 11100/15454 images
+Processed 11200/15454 images
+Processed 11300/15454 images
+Processed 11400/15454 images
+Processed 11500/15454 images
+Processed 11600/15454 images
+Processed 11700/15454 images
+Processed 11800/15454 images
+Processed 11900/15454 images
+Processed 12000/15454 images
+Processed 12100/15454 images
+Processed 12200/15454 images
+Processed 12300/15454 images
+Processed 12400/15454 images
+Processed 12500/15454 images
+Processed 12600/15454 images
+Processed 12700/15454 images
+Processed 12800/15454 images
+Processed 12900/15454 images
+Processed 13000/15454 images
+Processed 13100/15454 images
+Processed 13200/15454 images
+Processed 13300/15454 images
+Processed 13400/15454 images
+Processed 13500/15454 images
+Processed 13600/15454 images
+Processed 13700/15454 images
+Processed 13800/15454 images
+Processed 13900/15454 images
+Processed 14000/15454 images
+Processed 14100/15454 images
+Processed 14200/15454 images
+Processed 14300/15454 images
+Processed 14400/15454 images
+Processed 14500/15454 images
+Processed 14600/15454 images
+Processed 14700/15454 images
+Processed 14800/15454 images
+Processed 14900/15454 images
+Processed 15000/15454 images
+Processed 15100/15454 images
+Processed 15200/15454 images
+Processed 15300/15454 images
+Processed 15400/15454 images
+
+Applying combined resampling strategy...
+Original class distribution: Counter({np.int64(3): 5361, np.int64(1): 4152, np.int64(0): 3789, np.int64(2): 2152})
+Resampled class distribution: Counter({np.int64(2): 5360, np.int64(1): 5359, np.int64(0): 5355, np.int64(3): 5354})
+
+
+Training classifier...
+Epoch 1/50, Train Loss: 0.5407, Val Loss: 0.2597
+Epoch 5/50, Train Loss: 0.1131, Val Loss: 0.0309
+Epoch 10/50, Train Loss: 0.0557, Val Loss: 0.0104
+Epoch 15/50, Train Loss: 0.0433, Val Loss: 0.0067
+Epoch 20/50, Train Loss: 0.0271, Val Loss: 0.0038
+Epoch 25/50, Train Loss: 0.0202, Val Loss: 0.0029
+Epoch 30/50, Train Loss: 0.0125, Val Loss: 0.0030
+Epoch 35/50, Train Loss: 0.0088, Val Loss: 0.0028
+Epoch 40/50, Train Loss: 0.0056, Val Loss: 0.0019
+Epoch 45/50, Train Loss: 0.0055, Val Loss: 0.0022
+Epoch 50/50, Train Loss: 0.0033, Val Loss: 0.0021
+
+
+Evaluating classifier...
+
+
+
+
+
+Training classifier...
+Epoch 1/30, Train Loss: 0.5309, Val Loss: 0.2454
+Epoch 5/30, Train Loss: 0.1027, Val Loss: 0.0338
+Epoch 10/30, Train Loss: 0.0544, Val Loss: 0.0109
+Epoch 15/30, Train Loss: 0.0292, Val Loss: 0.0062
+Epoch 20/30, Train Loss: 0.0162, Val Loss: 0.0034
+Epoch 25/30, Train Loss: 0.0093, Val Loss: 0.0020
+Epoch 30/30, Train Loss: 0.0070, Val Loss: 0.0028
+
+
+Evaluating classifier...
+
+Training Set Metrics:
+Accuracy: 1.0000
+Balanced Accuracy: 1.0000
+Macro F1: 1.0000
+Macro Precision: 1.0000
+Macro Recall: 1.0000
+Macro AUC: 1.0000
+Geometric Mean: 1.0000
+
+Per-class metrics:
+
+Benign:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1: 1.0000
+  AUC: 1.0000
+
+Actionable:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1: 1.0000
+  AUC: 1.0000
+
+Cancer:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1: 1.0000
+  AUC: 1.0000
+
+Normal:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1: 1.0000
+  AUC: 1.0000
+
+Validation Set Metrics:
+Accuracy: 0.9988
+Balanced Accuracy: 0.9988
+Macro F1: 0.9988
+Macro Precision: 0.9988
+Macro Recall: 0.9988
+Macro AUC: 0.9999
+Geometric Mean: 0.9992
+
+Per-class metrics:
+
+Benign:
+  Precision: 0.9981
+  Recall: 1.0000
+  F1: 0.9991
+  AUC: 1.0000
+
+Actionable:
+  Precision: 0.9972
+  Recall: 1.0000
+  F1: 0.9986
+  AUC: 1.0000
+
+Cancer:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1: 1.0000
+  AUC: 1.0000
+
+Normal:
+  Precision: 1.0000
+  Recall: 0.9953
+  F1: 0.9977
+  AUC: 0.9997
+
+=== FINAL PERFORMANCE SUMMARY ===
+Overall Accuracy: 0.9988
+Balanced Accuracy: 0.9988
+Macro F1 Score: 0.9988
+Macro AUC: 0.9999
+Macro Recall: 0.9988
+
+Per-Class Performance:
+Benign: F1=0.9991, AUC=1.0000, Recall=1.0000
+Actionable: F1=0.9986, AUC=1.0000, Recall=1.0000
+Cancer: F1=1.0000, AUC=1.0000, Recall=1.0000
+Normal: F1=0.9977, AUC=0.9997, Recall=0.9953
+
+
+Minority Class Performance Analysis:
+
+Cancer class:
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-score: 1.0000
+  AUC: 1.0000
+
+Benign class:
+  Precision: 0.9981
+  Recall: 1.0000
+  F1-score: 0.9991
+  AUC: 1.0000
+
+------------
+KEY IMPROVEMENTS FOR IMBALANCED DATASET:
+1. Used advanced resampling (SMOTETomek) to handle imbalance
+2. Implemented Focal Loss which naturally handles class imbalance
+3. Added extra augmentation for minority classes
+4. Used effective number sampling for better class weighting
+5. Implemented a PyTorch classifier with batch normalization and dropout
